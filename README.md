@@ -2,9 +2,9 @@
 
 Submitted by: **Quynh Nguyen**
 
-About this web app: **App description here**
+About this web app: **A brief guide to some sanrio characters.**
 
-Time spent: **X** hours
+Time spent: **10** hours
 
 ## Required Features
 
