@@ -6,6 +6,9 @@ About this web app: **A brief guide to some sanrio characters.**
 
 Time spent: **10** hours
 
+## GIF
+![](https://github.com/qngyn/codepath-web103/blob/project1/ezgif.com-video-to-gif.gif)
+
 ## Required Features
 
 The following **required** functionality is completed:
