@@ -1,6 +1,6 @@
-/* Root Styles CSS */
+
 :root {
-    background-color: white;
+    background-color: rgb(255, 254, 255);
     font-family: Avenir, Helvetica, sans-serif;
     color: black;
   }
@@ -10,7 +10,9 @@
     overflow: hidden;
     padding: 20px 10px;
     padding-bottom: 60px;
+    font-family: 'Rubik Bubbles', cursive;
   }
+
   
   .header-left {
     float: left;
@@ -18,14 +20,9 @@
     width: 310px;
   }
   
-  .header-left img {
-    padding-top: 8px;
-    height: 80px;
-  }
-  
-  .header-left h1 {
-    float: right;
-    font-size: 45px;
+  .header-left h2 {
+    font-size: 30px;
+    color: #f6b1ba;
     
   }
   
@@ -33,23 +30,24 @@
     float: right;
     padding-top:30px;
     padding-right:10px;
+    color: #f6b1ba;
   }
   
-  .header-right button {
-  background-color: white;
-  border: solid;
-  border-width: 3px;
-  border-color: rgb(3, 7, 89);
-  border-radius: 0.1rem;
-  border-radius: 16px;
-  box-sizing: border-box;
-  color:  rgb(3, 7, 89);
-  cursor: pointer;
-  padding: 15px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  width: 80px;
+  .header-button {
+    border: solid 1px;
+    border-width: 3px;
+    border-color: #f7bcc4;
+    border-radius: 0.1rem;
+    border-radius: 16px;
+    box-sizing: border-box;
+    color:  rgb(3, 7, 89);
+    cursor: pointer;
+    padding: 15px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    width: 80px;
+    color: #f7c8ce;
   }
   
   /* Home page CSS */
@@ -61,48 +59,49 @@
     justify-content: center;
   }
   
-  .card {
-    width: 300px;
-    height: 400px;
-    background: transparent;
-    border-style: solid;
-    border-width: 3px;
-    border-color: rgb(3, 7, 89);
-    border-radius: 0.3rem;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.057);
+  .character-card {
+    width: 30%;
+    height: 20%;
+    background-color: white;
+    border-color: #f1dade;
+    border-style: dotted;
+    box-shadow: 10px 10px 1px 1px #f1dade;
     margin-top: 0px;
-    margin-left: 20px;
-    margin-right: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 60px;
   }
   
-  .card img {
-    height: 100%;
+  .character-card img {
+    height: 10%;
   }
   
   .top-container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 250px;
+    height: 24em;
   }
   
   .bottom-container {
-    margin-top:30px;
-    margin-left: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
   
   .bottom-container h3 {
     margin-top: 10px;
     margin-bottom: 6px;
+    font-family: 'Poppins', sans-serif;
+    color: #e95962;
   }
-  
+
   .bottom-container p {
     margin: 2px;
   }
   
   .bottom-container a {
-    color: rgb(228, 16, 133);
+    color: #f6b1ba;
     text-decoration: none;
   }
   
@@ -136,7 +135,7 @@
   
   /* Detail Page CSS*/
   
-  .gift-info {
+  .character-info {
     display: flex;
     flex-direction: row;
   }
@@ -150,6 +149,14 @@
     width: 80%;
   }
   
-  .gift-details {
+  .character-details {
     width: 45vw;
+  }
+
+  #name {
+    color: #e95962;
+  }
+
+  .return-link{
+    color: #e95962
   }

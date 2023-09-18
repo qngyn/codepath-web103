@@ -19,6 +19,10 @@ const renderCharacters = async () => {
             characterName.textContent = character.name;
             bottomContainer.appendChild(characterName);
 
+            const characterJapaneseName = document.createElement('h5');
+            characterJapaneseName.textContent = character.japanese_name;
+            bottomContainer.appendChild(characterJapaneseName);
+
             const readMore = document.createElement('a');
             readMore.textContent = 'Read More >';
             readMore.setAttribute('role', 'button');
@@ -39,5 +43,10 @@ const renderCharacters = async () => {
 
 
 }
-
-renderCharacters();
+const requestedUrl = window.location.href.split('/').pop()
+if (requestedUrl) {
+    window.location.href = '../404.html'
+  }
+  else {
+    renderCharacters()
+  }

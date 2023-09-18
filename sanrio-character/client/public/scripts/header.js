@@ -5,7 +5,7 @@ headerContainer.className = 'header-container'
 const headerLeft = document.createElement('div')
 headerLeft.className = 'header-left'
 
-const headerTitle = document.createElement('h1')
+const headerTitle = document.createElement('h2')
 headerTitle.textContent = 'Sanrio Character'
 
 headerLeft.appendChild(headerTitle)
@@ -14,6 +14,7 @@ const headerRight = document.createElement('div')
 headerRight.className = 'header-right'
 
 const headerRightButton = document.createElement('Explore')
+headerRightButton.className = 'header-button'
 headerRightButton.textContent = 'Explore'
 
 headerRightButton.addEventListener('click', function handleClick(event) {
