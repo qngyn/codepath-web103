@@ -11,6 +11,7 @@ const renderCharacter = async () => {
         document.getElementById('description').textContent = character.description;
         document.getElementById('debut').textContent = character.debut_year;
         document.title = `Sanrio Character - ${character.name}`;
+
     } else {
         const noCharacter = document.createElement('h2');
         noCharacter.textContent = 'No character found';
