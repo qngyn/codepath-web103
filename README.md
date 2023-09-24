@@ -12,7 +12,7 @@
 - Lab 8: On the Fly, Part 3
 - Lab 9: On the Fly, Part 4
 - Project 1: [Listicle Part 1](https://github.com/qngyn/codepath-web103/tree/project1)
-- Project 2: Listicle Part 2
+- Project 2: [Listicle Part 2](https://github.com/qngyn/codepath-web103/tree/project2)
 - Project 3: Virtual Community Space
 - Project 4: DIY Delight
 - Final Project
