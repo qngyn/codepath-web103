@@ -20,7 +20,7 @@ const renderCharacters = async () => {
             bottomContainer.appendChild(characterName);
 
             const characterJapaneseName = document.createElement('h5');
-            characterJapaneseName.textContent = character.japanese_name;
+            characterJapaneseName.textContent = character.japanesename;
             bottomContainer.appendChild(characterJapaneseName);
 
             const readMore = document.createElement('a');

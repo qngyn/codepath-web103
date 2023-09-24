@@ -1,5 +1,6 @@
 import express from 'express';
 import characterRoutes from './routes/characters.js';
+import "./config/dotenv.js";
 
 const app = express(); 
 
