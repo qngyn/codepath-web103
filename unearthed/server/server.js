@@ -1,11 +1,12 @@
 import express from 'express'
 import giftsRouter from './routes/gifts.js'
 import "./config/dotenv.js"
+import cors from 'cors'
 
 const app = express()
-
-app.use('/public', express.static('./public'))
-app.use('/scripts', express.static('./public/scripts'))
+app.use(cors())
+// app.use('/public', express.static('./public'))
+// app.use('/scripts', express.static('./public/scripts'))
 app.use('/gifts', giftsRouter)
 
 app.get('/', (req, res) => {
