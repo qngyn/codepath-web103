@@ -4,7 +4,7 @@
 ## Table of Contents:
 - Lab 1: [UnEarthed Part 1](https://github.com/qngyn/codepath-web103/tree/lab1)
 - Lab 2: [UnEarthed Part 2](https://github.com/qngyn/codepath-web103/tree/lab2)
-- Lab 3: UnEarthed Part 3
+- Lab 3: [UnEarthed Part 3](https://github.com/qngyn/codepath-web103/tree/lab3)
 - Lab 4: UnEarthed Part 4
 - Lab 5: On The Fly: Part 1
 - Lab 6: On The Fly, Part 2
