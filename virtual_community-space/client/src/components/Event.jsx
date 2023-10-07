@@ -5,19 +5,19 @@ import EventsAPI from '../api/EventsAPI'
 const Event = (props) => {
 
     const [event, setEvent] = useState([])
-    const [time, setTime] = useState([])
-    const [remaining, setRemaining] = useState([])
+    // const [time, setTime] = useState([])
+    // const [remaining, setRemaining] = useState([])
 
     useEffect(() => {
-        (async () => {
+        const eventData = async () => {
             try {
-                const eventData = await EventsAPI.getEventById(props.id)
-                setEvent(eventData)
-            }
-            catch (error) {
+                const response = await EventsAPI.getEventById(props.id)
+                setEvent(response)
+            } catch (error) {
                 throw error
             }
-        }) ()
+        }
+        eventData()
     }, [])
 
     // useEffect(() => {
