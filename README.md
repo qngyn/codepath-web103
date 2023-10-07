@@ -7,7 +7,7 @@ About this web app: **App description here**
 Time spent: **15** hours
 
 ## GIF 
-![]([https://submissions.us-east-1.linodeobjects.com/web103/aaM_D3gy.gif](https://github.com/qngyn/codepath-web103/blob/project3/aaM_D3gy.gif))
+![](https://github.com/qngyn/codepath-web103/blob/project3/aaM_D3gy.gif)
 
 ## Required Features
 
