@@ -4,11 +4,15 @@ Submitted by: **Quynh Nguyen**
 
 About this web app: **App description here**
 
-Time spent: **X** hours
+Time spent: **15** hours
+
+## GIF 
+[](https://submissions.us-east-1.linodeobjects.com/web103/aaM_D3gy.gif)
 
 ## Required Features
 
 The following **required** functionality is completed:
+
 
 <!-- Make sure to check off completed functionality below -->
 
