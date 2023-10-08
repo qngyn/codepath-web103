@@ -1,36 +1,14 @@
-# CodePath WEB103: Advanced Web Development - Fall 2023 
-- Labs and Projects for CodePath WEB 103
+# Lab 4: UnEarthed, Part 4 
+- CRUD 
 
-## Table of Contents:
-- Lab 1: UnEarthed Part 1
-- Lab 2: UnEarthed Part 2
-- Lab 3: UnEarthed Part 3
-- Lab 4: UnEarthed Part 4
-- Lab 5: On The Fly: Part 1
-- Lab 6: On The Fly, Part 2
-- Lab 7:
-- Lab 8: On the Fly, Part 3
-- Lab 9: On the Fly, Part 4
-- Project 1: Listicle Part 1
-- Project 2: Listicle Part 2
-- Project 3: Virtual Community Space
-- Project 4: DIY Delight
-- Final Project
-
-## Contributors:
-- Quynh (Quinn) Nguyen
-
-## License
-Copyright [2023] [Quynh Nguyen]
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+## Goals: 
+[x] Develop create, update, and delete functions for a server
+[x] Write frontend and backend code for a CRUD app
+[x] The web app uses React to display data from the API.
+[x] The web app is connected to a PostgreSQL database, with an appropriately structured gifts table.
+[x] The web app displays the title and logo of UnEarthed.
+[x] The web app displays a list of gifts that have been submitted, including at least the name, price point, audience, and image.
+[x] The user can click on each item in the list to see a detail view of it, including all database fields.
+[x] The user can edit or delete an item from the detail page.
+[x] Each gift detail page should have its own unique URL.
+[x] The user can create a new item to add to UnEarthed, which is then displayed on the home page upon creation.
