@@ -15,7 +15,7 @@ const getCarById = async (req, res) => {
     try {
         const carId = req.params.carId
         const selectQuery = `
-            SELECT exterior, roof, wheels, interior
+            SELECT name, exterior, roof, wheels, interior
             FROM CustomItem
             WHERE id = ${carId}
         `
@@ -29,14 +29,14 @@ const getCarById = async (req, res) => {
 // POST 
 const createCar = async (req, res) => {
     try {
-        const { exterior, roof, wheels, interior } = req.body 
+        const { name, exterior, roof, wheels, interior } = req.body 
         const result = await pool.query(
             `
-            INSERT INTO CustomItem (exterior, roof, wheels, interior) 
-            VALUES ($1, $2, $3, $4)
+            INSERT INTO CustomItem (name, exterior, roof, wheels, interior) 
+            VALUES ($1, $2, $3, $4, $5)
             RETURNING *
             `,
-            [exterior, roof, wheels, interior]
+            [name, exterior, roof, wheels, interior]
         )
         res.status(201).json(result.rows[0])
 
@@ -49,12 +49,12 @@ const createCar = async (req, res) => {
 const updateCar = async (req, res) => {
     try {
         const id = parseInt(req.params.id)
-        const { exterior, roof, wheels, interior } = req.body 
+        const { name, exterior, roof, wheels, interior } = req.body 
         const results = await pool.query(
             `   
-            UPDATE CustomItem SET exterior = $1, roof = $2, wheels = $3, interior = $4 WHERE id = $5
+            UPDATE CustomItem SET name = $1, exterior = $2, roof = $3, wheels = $4, interior = $5 WHERE id = $6
             `,
-            [exterior, roof, wheels, interior, id]
+            [name, exterior, roof, wheels, interior, id]
         )
 
         res.status(200).json(results.rows[0])
