@@ -6,7 +6,6 @@ import GiftDetails from './pages/GiftDetails'
 import PageNotFound from './pages/PageNotFound'
 import CreateGift from './pages/CreateGift';
 import EditGift from './pages/EditGift';
-import {CiSquareMore} from 'react-icons/ci'
 import { Link } from 'react-router-dom'
 
 
