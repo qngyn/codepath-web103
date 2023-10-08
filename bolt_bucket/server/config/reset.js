@@ -8,6 +8,7 @@ const createCarTable = async () => {
     CREATE TABLE IF NOT EXISTS CustomItem (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255),
+        price INTEGER NOT NULL,
         exterior VARCHAR(255) NOT NULL,
         roof VARCHAR(255) NOT NULL,
         wheels VARCHAR(255) NOT NULL,
