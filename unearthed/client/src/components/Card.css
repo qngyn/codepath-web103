@@ -43,3 +43,10 @@
     color: rgb(228, 16, 133);
     text-decoration: none;
 }
+
+.icon {
+    float: right;
+    max-height: 40px;
+    margin-top: 10px;
+    margin-right: 8px; 
+}

@@ -5,6 +5,7 @@ import cors from 'cors'
 
 const app = express()
 app.use(cors())
+app.use(express.json())
 // app.use('/public', express.static('./public'))
 // app.use('/scripts', express.static('./public/scripts'))
 app.use('/gifts', giftsRouter)

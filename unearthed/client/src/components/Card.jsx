@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {CiSquareMore} from 'react-icons/ci'
 import { Link } from 'react-router-dom'
 import './Card.css'
 
@@ -12,7 +13,9 @@ const Card = (props) => {
 
     return (
         <div className="card">
-            <div className='top-container' style={{ backgroundImage:`url(${gift.image})`}}></div>
+            <div className='top-container' style={{ backgroundImage:`url(${gift.image})`}}>
+                <Link to={'/edit/' + gift.id}><CiSquareMore className="icon"/> </Link>
+            </div>
             <div className='bottom-container'>
                 <h3>{gift.name}</h3>
                 <p>{'Price: ' + gift.pricepoint}</p>

@@ -9,8 +9,12 @@ import GiftsController from '../controllers/gifts.js'
 
 const router = express.Router()
 
-
+router.get('/', GiftsController.getGifts)
 router.get('/:giftId',  GiftsController.getGiftById)
+
+router.post('/', GiftsController.createGift)
+router.delete('/:id', GiftsController.deleteGift)
+router.patch('/:id', GiftsController.updateGift)
 // (req, res) => {
 //   res.status(200).sendFile(path.resolve(__dirname, '../public/gift.html'))
 // })
