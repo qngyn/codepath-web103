@@ -9,10 +9,10 @@ const createCarTable = async () => {
         id SERIAL PRIMARY KEY,
         name VARCHAR(255),
         price INTEGER NOT NULL,
-        exterior VARCHAR(255) NOT NULL,
-        roof VARCHAR(255) NOT NULL,
-        wheels VARCHAR(255) NOT NULL,
-        interior VARCHAR(255) NOT NULL
+        exterior VARCHAR(255),
+        roof VARCHAR(255),
+        wheels VARCHAR(255),
+        interior VARCHAR(255)
     )
     `
     try {

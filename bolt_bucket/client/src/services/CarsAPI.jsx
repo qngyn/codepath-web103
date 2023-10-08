@@ -35,19 +35,21 @@ const CarsAPI = {
             console.error('Error updating car:', err);
         }
     }, 
-    deleteCar: async(carId) => {
+    deleteCar: async (carId) => {
         try {
-            const response = await fetch(`http://localhost:3000/cars/${carId}`, {
+            const options = {
                 method: 'DELETE'
-            })
+            }
+            const response = await fetch(`http://localhost:3000/cars/${carId}`, options)
             if (response.ok) {
-                window.location = '/';
+                window.location = '/customcars';
             } else {
                 console.error('Error deleting car:', response.statusText);
             }
         } catch (err) {
             console.error('Error deleting car:', err);
         }
+        
     }
 }
 

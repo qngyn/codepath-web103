@@ -25,16 +25,16 @@ const ViewCars = () => {
                             <h2> {car.name}</h2>
                             <div className="car-info">
                                 <div className="card-info-block"> 
-                                    <p> <span className="card-description">Exterior</span>: {car.exterior}</p>
+                                    <p> <span className="card-description">&#x1F58C;&#xFE0F; Exterior</span>: {car.exterior}</p>
                                     <p> <span className="card-description">&#x1F6DE; Wheels</span>: {car.wheels}</p>
                                 </div>
                                 <div className="card-info-block"> 
-                                    <p> <span className="card-description">Interior</span>: {car.interior}</p>
+                                    <p> <span className="card-description">&#128186; Interior</span>: {car.interior}</p>
                                     <p> <span className="card-description"> &#x1F60E; Roof</span>: {car.roof}</p>
                                 </div>
                                 <div className="card-info-block"> 
                                     <p className="card-price"> &#x1F4B0; ${car.price}</p>
-                                    
+                                    <a href={'/customcars/' + car.id} role='button'>Details</a>
                                 </div>
                             </div>
                         </div>

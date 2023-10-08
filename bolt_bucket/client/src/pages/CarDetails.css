@@ -1,0 +1,16 @@
+.car-container {
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 5vh 8vh;
+    padding: 5vh 10vh;
+}
+.car-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.car-body-info {
+    flex-direction: column;
+}
