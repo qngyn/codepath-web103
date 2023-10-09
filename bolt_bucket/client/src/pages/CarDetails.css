@@ -14,3 +14,7 @@
 .car-body-info {
     flex-direction: column;
 }
+
+.car-button {
+    display: flex;
+}

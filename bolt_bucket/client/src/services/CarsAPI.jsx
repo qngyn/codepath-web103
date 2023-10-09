@@ -16,7 +16,27 @@ const CarsAPI = {
         } catch (err) {
             console.error('Error fetching cars:', err);
         }
-    }, 
+    },
+    createCar: async(carInfo) => {
+        try {
+            const options = {
+                method: 'POST',
+                header: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(carInfo)
+            }
+            const response = await fetch('http://localhost:3000/cars', options)
+            if (response.ok) {
+                window.location = '/customcars';
+            } else {
+                console.error('Error deleting car:', response.statusText);
+            }
+        } catch (err) {
+            console.error('Error creating car:', err);
+        }
+    }
+    ,
     updateCar : async(carId, updateCarInfo) => {
         try {
             const response = await fetch(`http://localhost:3000/cars/${carId}`, {

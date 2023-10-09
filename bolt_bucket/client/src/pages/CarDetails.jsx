@@ -31,8 +31,10 @@ const CarDetails = () => {
             <div className="car-body">
                 <div className="car-body-info">
                     <h4> &#x1F4B0; ${car.price} </h4>
-                    <a href={'/edit/' + car.id} role='button'>EDIT</a>
-                    <button onClick={deleteCar}>DELETE</button>
+                    <div className="car-button"> 
+                        <a href={'/edit/' + carId} role='button'>EDIT</a>
+                        <button onClick={deleteCar}>DELETE</button>
+                    </div>
                 </div>
                 <div className="car-body-info">
                     <h4> {car.exterior} </h4>

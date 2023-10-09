@@ -1,0 +1,38 @@
+.create-car {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.create-car-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.option-list {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+  
+.option-list.show {
+    height: auto;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-value {
+    border: solid white 1px;
+    width: 15vw;
+    height: 10vh;
+}
+
+  
+  
+  
+  
+  
