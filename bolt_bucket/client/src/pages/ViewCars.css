@@ -21,6 +21,9 @@
 }
 
 .card-description {
+    font-size: 0.8rem;
+}
+.card-description-name {
     font-weight: 600;
 }
 

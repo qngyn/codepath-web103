@@ -22,15 +22,15 @@ const ViewCars = () => {
                 cars.map((car) => {
                     return (
                         <div key={car.id} className='car-card'>
-                            <h2> {car.name}</h2>
+                            <h2> {car.name ? car.name : " "}</h2>
                             <div className="car-info">
                                 <div className="card-info-block"> 
-                                    <p> <span className="card-description">&#x1F58C;&#xFE0F; Exterior</span>: {car.exterior}</p>
-                                    <p> <span className="card-description">&#x1F6DE; Wheels</span>: {car.wheels}</p>
+                                    <p className="card-description"> <span className="card-description-name">&#x1F58C;&#xFE0F; Exterior</span>: {car.exterior}</p>
+                                    <p className="card-description"> <span className="card-description-name">&#x1F6DE; Wheels</span>: {car.wheels}</p>
                                 </div>
                                 <div className="card-info-block"> 
-                                    <p> <span className="card-description">&#128186; Interior</span>: {car.interior}</p>
-                                    <p> <span className="card-description"> &#x1F60E; Roof</span>: {car.roof}</p>
+                                    <p className="card-description"> <span className="card-description-name">&#128186; Interior</span>: {car.interior}</p>
+                                    <p className="card-description"> <span className="card-description-name"> &#x1F60E; Roof</span>: {car.roof}</p>
                                 </div>
                                 <div className="card-info-block"> 
                                     <p className="card-price"> &#x1F4B0; ${car.price}</p>

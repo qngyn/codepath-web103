@@ -1,7 +1,7 @@
 const DisplayOption = ({...props}) => {
     const { options, showOption, fieldName, onChange } = props
-    const handleOptionClick = (optionName, price) => {
-        onChange(optionName, fieldName, price);
+    const handleOptionClick = (optionName, price, image) => {
+        onChange(optionName, fieldName, price, image);
     };
 
     return (
@@ -10,7 +10,7 @@ const DisplayOption = ({...props}) => {
                 <div 
                     key={index} 
                     className="option-value"
-                    onClick={() => handleOptionClick(option.name, option.price)}
+                    onClick={() => handleOptionClick(option.name, option.price, option.image)}
                 >
                     <img src={option.image} alt={option.name} />
                 </div>

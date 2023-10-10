@@ -17,12 +17,16 @@ const CreateCar = () => {
         price: 65000,
         exterior: '',
         exteriorprice: 0,
+        exteriorimage: '',
         wheels: '',
         wheelsprice: 0,
+        wheelsimage:'',
         roof: '',
         roofprice: 0,
+        roofimage: '',
         interior: '',
         interiorprice: 0,
+        interiorimage: ''
     })
 
     const [showExterior, setShowExterior] = useState(false);
@@ -31,17 +35,22 @@ const CreateCar = () => {
     const [showInterior, setShowInterior] = useState(false);
 
 
-    const handleChange = (optionName, fieldName, price) => {
+    const handleChange = (optionName, fieldName, price, image) => {
         setCar((prevCar) => {
             const prevOptionPrice = prevCar[fieldName] === '' ? 0 : prevCar[`${fieldName}price`];
             return {
                 ...prevCar,
                 [fieldName]: optionName,
                 [`${fieldName}price`]: price,
+                [`${fieldName}image`]: image,
                 price: prevCar.price - prevOptionPrice + price
             }
         })
     };
+
+    useEffect(() => { 
+        console.log(car)
+    }, [car])
 
     const createCar = (event) => {
         event.preventDefault()
