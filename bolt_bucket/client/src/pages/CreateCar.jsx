@@ -1,7 +1,7 @@
 import '../App.css'
 import './CreateCar.css'
 import CarsAPI from '../services/CarsAPI'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     ExteriorOptions, 
     RoofOptions,
@@ -9,30 +9,39 @@ import {
     InteriorOptions
 } from '../options/options'
 
+import DisplayOption from '../components/DisplayOption'
+
 const CreateCar = () => {
     const [car, setCar] = useState({
         name: '',
+        price: 65000,
         exterior: '',
+        exteriorprice: 0,
         wheels: '',
+        wheelsprice: 0,
         roof: '',
+        roofprice: 0,
         interior: '',
-        price: 65000
+        interiorprice: 0,
     })
+
     const [showExterior, setShowExterior] = useState(false);
     const [showRoof, setShowRoof] = useState(false);
     const [showWheels, setShowWheels] = useState(false);
     const [showInterior, setShowInterior] = useState(false);
 
 
-    const handleChange = (event) => {
-        const { name, value } = event.target
-        setGift( (prev) => {
+    const handleChange = (optionName, fieldName, price) => {
+        setCar((prevCar) => {
+            const prevOptionPrice = prevCar[fieldName] === '' ? 0 : prevCar[`${fieldName}price`];
             return {
-                ...prev,
-                [name]:value,
+                ...prevCar,
+                [fieldName]: optionName,
+                [`${fieldName}price`]: price,
+                price: prevCar.price - prevOptionPrice + price
             }
         })
-    }
+    };
 
     const createCar = (event) => {
         event.preventDefault()
@@ -46,28 +55,26 @@ const CreateCar = () => {
         setShowInterior(false);
       };
     
-      const toggleRoofOptions = () => {
+    const toggleRoofOptions = () => {
         setShowExterior(false);
         setShowRoof(true);
         setShowWheels(false);
         setShowInterior(false);
-      };
+    };
     
-      const toggleWheelsOptions = () => {
+    const toggleWheelsOptions = () => {
         setShowExterior(false);
         setShowRoof(false);
         setShowWheels(true);
         setShowInterior(false);
-      };
+    };
     
-      const toggleInteriorOptions = () => {
+    const toggleInteriorOptions = () => {
         setShowExterior(false);
         setShowRoof(false);
         setShowWheels(false);
         setShowInterior(true);
-      };
-
-
+    };
     return (
         <div className="body-container">
             <div className="create-car">
@@ -88,50 +95,48 @@ const CreateCar = () => {
                         <button onClick={toggleInteriorOptions}>Interior</button>
                     </div>
                 </div>
+
+                <div className="car-button">
+                    <button onClick={createCar}>CREATE</button>
+                </div>
             </div>
-            <div> 
+            <div className="option-container"> 
                 {showExterior && (
-                    <div className={`option-list ${showExterior ? 'show' : ''}`}>
-                            {ExteriorOptions.map((option, index) => (
-                                <div 
-                                    key={index} 
-                                    className="option-value"
-                                >
-                                    <img src={option.image} alt={option.name} />
-                                </div>
-                            ))}
-                    </div>
+                    <DisplayOption 
+                        options = {ExteriorOptions}
+                        showOption = {showExterior}
+                        fieldName="exterior"
+                        onChange={handleChange}
+                    />
                 )}
                 {showRoof && (
-                    <div className={`option-list ${showRoof ? 'show' : ''}`}>
-                            {RoofOptions.map((option, index) => (
-                                <div key={index} className="option-value">
-                                    <img src={option.image} alt={option.name} />
-                                </div>
-                            ))}
-                    </div>
+                    <DisplayOption 
+                        options = {RoofOptions}
+                        showOption = {showRoof}
+                        fieldName="roof"
+                        onChange={handleChange}
+                    />
                 )}
+
                 {showWheels && (
-                    <div className={`option-list ${showWheels ? 'show' : ''}`}>
-                            {WheelsOptions.map((option, index) => (
-                                <div key={index} className="option-value">
-                                    <img src={option.image} alt={option.name} />
-                                </div>
-                            ))}
-                    </div>
+                    <DisplayOption 
+                        options = {WheelsOptions}
+                        showOption = {showWheels}
+                        fieldName="wheels"
+                        onChange={handleChange}
+                    />
                 )}
                 {showInterior && (
-                    <div className={`option-list ${showInterior ? 'show' : ''}`}>
-                            {InteriorOptions.map((option, index) => (
-                                <div key={index} className="option-value">
-                                    <img src={option.image} alt={option.name} />
-                                </div>
-                            ))}
-                    </div>
+                    <DisplayOption 
+                        options = {InteriorOptions}
+                        showOption = {showInterior}
+                        fieldName="interior"
+                        onChange={handleChange}
+                    />
                 )}
             </div>
             <div className="car-price">
-                {car.price}
+                &#x1F4B0; ${car.price}
             </div>
         </div>
     )

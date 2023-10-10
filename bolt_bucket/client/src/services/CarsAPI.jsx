@@ -21,7 +21,7 @@ const CarsAPI = {
         try {
             const options = {
                 method: 'POST',
-                header: {
+                headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(carInfo)

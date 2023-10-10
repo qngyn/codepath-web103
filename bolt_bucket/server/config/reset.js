@@ -10,9 +10,13 @@ const createCarTable = async () => {
         name VARCHAR(255),
         price INTEGER NOT NULL,
         exterior VARCHAR(255),
+        exteriorprice INTEGER NOT NULL,
         roof VARCHAR(255),
+        roofprice INTEGER NOT NULL,
         wheels VARCHAR(255),
-        interior VARCHAR(255)
+        wheelsprice INTEGER NOT NULL,
+        interior VARCHAR(255),  
+        interiorprice INTEGER NOT NULL
     )
     `
     try {
