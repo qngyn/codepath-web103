@@ -15,7 +15,6 @@ const ViewCars = () => {
         }
         carsData()
     }, [])
-
     return (
         <div>
             {

@@ -84,6 +84,7 @@ const CreateCar = () => {
         setShowWheels(false);
         setShowInterior(true);
     };
+
     return (
         <div className="body-container">
             <div className="create-car">

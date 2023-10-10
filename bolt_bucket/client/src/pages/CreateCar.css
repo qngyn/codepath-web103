@@ -28,9 +28,54 @@
     flex-direction: column;
 }
 
-.option-value {
-    margin: 0 2vh;
+.option-list {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 20px;
+    row-gap: 20px
 }
+
+.option-value {
+    position: relative;
+    width: 140px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer
+}
+
+.car-detail-image {
+    width: 100%;
+    height: 100%;
+}
+
+.option-card-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    padding: 5px;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s;
+    position: absolute;
+}
+
+.option-card-details p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.option-card-overlay:hover {
+    opacity: 1;
+}
+
 
 .option-container {
     display: fixed;
@@ -49,9 +94,6 @@
     background-color: var(--primary);
 }
 
-
-  
-  
-  
-  
-  
+.selected-option {
+    border: 2px solid white;
+}
