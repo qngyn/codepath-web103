@@ -22,7 +22,6 @@ const CarDetails = () => {
         CarsAPI.deleteCar(carId)
     }
 
-    console.log(car)
     return (
         <div className="car-container">
             <div className="car-headliner"> 

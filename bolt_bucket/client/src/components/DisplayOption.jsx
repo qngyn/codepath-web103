@@ -18,8 +18,8 @@ const DisplayOption = ({...props}) => {
                         /> 
                         <div className="option-card-overlay">
                             <div className="option-card-details"> 
-                                <p clasName="car-description"> {option.name}</p>
-                                <p clasName="car-description">  &#128181; {option.price}</p>
+                                <p className="car-description"> {option.name}</p>
+                                <p className="car-description">  &#128181; {option.price}</p>
                             </div>
                         </div>
                     </div>

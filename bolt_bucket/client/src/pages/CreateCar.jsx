@@ -54,7 +54,52 @@ const CreateCar = () => {
 
     const createCar = (event) => {
         event.preventDefault()
-        CarsAPI.createCar(car)
+        const updatedCar = { ...car };
+        const defaultCar = {
+            name: 'Default Car',
+            price: 65000,
+            exterior: 'Silver Flare Metallic',
+            exteriorprice: 500,
+            exteriorimage: 'https://images-visualizer.gm.com/swatches/chevrolet/us/b2c/en/2023/corvette-stingray/small/gsj.png',
+            wheels: 'Ultra Bright Trident Spoke',
+            wheelsprice: 500,
+            wheelsimage:"https://images-visualizer.gm.com/swatches/chevrolet/us/b2c/en/2023/corvette-stingray/small/q8s.png",
+            roof: 'Body Color',
+            roofprice: 500,
+            roofimage: "https://images-visualizer.gm.com/swatches/chevrolet/us/b2c/en/2023/corvette-stingray/small/cm9.png",
+            interior: 'Adrenaline Red',
+            interiorprice: 1000,
+            interiorimage: "https://images-visualizer.gm.com/swatches/chevrolet/us/b2c/en/2023/corvette-stingray/small/o_aric.png"
+        }
+
+        if (updatedCar.exterior === '') {
+            updatedCar.exterior = defaultCar.exterior;
+            updatedCar.exteriorprice = defaultCar.exteriorprice;
+            updatedCar.exteriorimage = defaultCar.exteriorimage;
+            updatedCar.price += updatedCar.exteriorprice
+        }
+
+        if (updatedCar.wheels === '') {
+            updatedCar.wheels = defaultCar.wheels;
+            updatedCar.wheelsprice = defaultCar.wheelsprice;
+            updatedCar.wheelsimage = defaultCar.wheelsimage;
+            updatedCar.price += updatedCar.wheelsprice
+        }
+        if (updatedCar.roof === '') {
+            updatedCar.roof = defaultCar.roof;
+            updatedCar.roofprice = defaultCar.roofprice;
+            updatedCar.roofimage = defaultCar.roofimage;
+            updatedCar.price += updatedCar.roofprice
+        }
+
+        if (updatedCar.interior === '') {
+            updatedCar.interior = defaultCar.interior;
+            updatedCar.interiorprice = defaultCar.interiorprice;
+            updatedCar.interiorimage = defaultCar.interiorimage;
+            updatedCar.price += updatedCar.interiorprice
+        }
+
+        CarsAPI.createCar(updatedCar)
     }
 
     const toggleExteriorOptions = () => {
