@@ -29,14 +29,14 @@ const getCarById = async (req, res) => {
 // POST 
 const createCar = async (req, res) => {
     try {
-        const { name, price, exterior, exteriorprice, exteriorimage, roof, roofprice, roofimage, wheels, wheelsprice, wheelsimage, interior, interiorprice, interiorimage } = req.body 
+        const { name, price, exterior, exteriorprice, exteriorimage, roof, roofprice, roofimage, wheels, wheelsprice, wheelsimage, interior, interiorprice, interiorimage, convertible } = req.body 
         const result = await pool.query(
             `
-            INSERT INTO CustomItem (name, price, exterior, exteriorprice, exteriorimage, roof, roofprice, roofimage, wheels, wheelsprice, wheelsimage, interior, interiorprice, interiorimage) 
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+            INSERT INTO CustomItem (name, price, exterior, exteriorprice, exteriorimage, roof, roofprice, roofimage, wheels, wheelsprice, wheelsimage, interior, interiorprice, interiorimage, convertible) 
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
             RETURNING *
             `,
-            [name, price, exterior, exteriorprice, exteriorimage, roof, roofprice, roofimage, wheels, wheelsprice, wheelsimage, interior, interiorprice, interiorimage]
+            [name, price, exterior, exteriorprice, exteriorimage, roof, roofprice, roofimage, wheels, wheelsprice, wheelsimage, interior, interiorprice, interiorimage, convertible]
         )
         res.status(201).json(result.rows[0])
 

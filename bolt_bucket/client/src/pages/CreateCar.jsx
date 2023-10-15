@@ -26,7 +26,8 @@ const CreateCar = () => {
         roofimage: '',
         interior: '',
         interiorprice: 0,
-        interiorimage: ''
+        interiorimage: '',
+        convertible: false
     })
 
     const [showExterior, setShowExterior] = useState(false);
@@ -37,7 +38,10 @@ const CreateCar = () => {
 
     const handleChange = (optionName, fieldName, price, image) => {
         setCar((prevCar) => {
-            const prevOptionPrice = prevCar[fieldName] === '' ? 0 : prevCar[`${fieldName}price`];
+            let prevOptionPrice = 0
+            if (fieldName !== 'convertible') {
+                prevOptionPrice = prevCar[fieldName] === '' ? 0 : prevCar[`${fieldName}price`];
+            } 
             return {
                 ...prevCar,
                 [fieldName]: optionName,
@@ -69,7 +73,8 @@ const CreateCar = () => {
             roofimage: "https://images-visualizer.gm.com/swatches/chevrolet/us/b2c/en/2023/corvette-stingray/small/cm9.png",
             interior: 'Adrenaline Red',
             interiorprice: 1000,
-            interiorimage: "https://images-visualizer.gm.com/swatches/chevrolet/us/b2c/en/2023/corvette-stingray/small/o_aric.png"
+            interiorimage: "https://images-visualizer.gm.com/swatches/chevrolet/us/b2c/en/2023/corvette-stingray/small/o_aric.png",
+            convertible: false
         }
 
         if (updatedCar.exterior === '') {
@@ -130,11 +135,21 @@ const CreateCar = () => {
         setShowInterior(true);
     };
 
+
+
     return (
         <div className="body-container">
             <div className="create-car">
                 <label> 
-                    <input type="checkbox" id="convertible" /> Convertible
+                    <input 
+                        type="checkbox" 
+                        id="convertible" 
+                        onChange={(e) => {
+                            const isChecked = e.target.checked;
+                            handleChange(isChecked, 'convertible', isChecked ? 10000 : -10000, ''); 
+                        }}
+                    /> 
+                    Convertible
                 </label>
                 <div className="create-car-options">
                     <div className="car-option">
@@ -162,6 +177,7 @@ const CreateCar = () => {
                         showOption = {showExterior}
                         fieldName="exterior"
                         onChange={handleChange}
+                        car={car}
                     />
                 )}
                 {showRoof && (
@@ -170,6 +186,7 @@ const CreateCar = () => {
                         showOption = {showRoof}
                         fieldName="roof"
                         onChange={handleChange}
+                        car={car}
                     />
                 )}
 
@@ -179,6 +196,7 @@ const CreateCar = () => {
                         showOption = {showWheels}
                         fieldName="wheels"
                         onChange={handleChange}
+                        car={car}
                     />
                 )}
                 {showInterior && (
@@ -187,6 +205,7 @@ const CreateCar = () => {
                         showOption = {showInterior}
                         fieldName="interior"
                         onChange={handleChange}
+                        car={car}
                     />
                 )}
             </div>

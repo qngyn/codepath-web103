@@ -2,6 +2,8 @@ import '../App.css'
 import './ViewCars.css'
 import { useState, useEffect } from 'react'
 import CarsAPI from '../services/CarsAPI'
+import nonconvertible from '../assets/nonconvertible.png'
+import convertible from '../assets/convertible.png'
 const ViewCars = () => {
     const [cars, setCars] = useState([])
     useEffect(() => {
@@ -19,9 +21,15 @@ const ViewCars = () => {
         <div>
             {
                 cars.map((car) => {
+                    const imageSource = car.convertible ? convertible : nonconvertible
                     return (
                         <div key={car.id} className='car-card'>
-                            <h2> {car.name ? car.name : " "}</h2>
+                            <header>
+                                <h2>
+                                    <img src={imageSource} className="car-image"/>
+                                    {car.name ? car.name : " "}
+                                </h2>
+                            </header>
                             <div className="car-info">
                                 <div className="card-info-block"> 
                                     <p className="card-description"> <span className="card-description-name">&#x1F58C;&#xFE0F; Exterior</span>: {car.exterior}</p>

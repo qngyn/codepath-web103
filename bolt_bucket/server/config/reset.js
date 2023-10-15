@@ -20,7 +20,8 @@ const createCarTable = async () => {
         wheelsimage VARCHAR(255) NOT NULL,
         interior VARCHAR(255) NOT NULL,  
         interiorprice INTEGER NOT NULL,
-        interiorimage VARCHAR(255) NOT NULL
+        interiorimage VARCHAR(255) NOT NULL,
+        convertible BOOLEAN NOT NULL
     )
     `
     try {
