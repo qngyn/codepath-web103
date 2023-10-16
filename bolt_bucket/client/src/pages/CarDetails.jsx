@@ -39,15 +39,15 @@ const CarDetails = () => {
                     <div className="car-detail"> 
                         <img src={car.exteriorimage} className="car-detail-image"/> 
                         <div className="car-detail-layer">
-                            <p clasName="car-description"> &#x1F58C;&#xFE0F; {car.exterior}</p>
-                            <p clasName="car-description">  &#128181; {car.exteriorprice}</p>
+                            <p className="car-description"> &#x1F58C;&#xFE0F; {car.exterior}</p>
+                            <p className="car-description">  &#128181; {car.exteriorprice}</p>
                         </div>
                     </div>
                     <div className="car-detail"> 
                         <img src={car.wheelsimage} className="car-detail-image"/> 
                         <div className="car-detail-layer">
-                            <p clasName="car-description"> &#x1F6DE; {car.wheels}</p>
-                            <p clasName="car-description">  &#128181; {car.wheelsprice}</p>
+                            <p className="car-description"> &#x1F6DE; {car.wheels}</p>
+                            <p className="car-description">  &#128181; {car.wheelsprice}</p>
                         </div>
                     </div>
                 </div>
@@ -55,8 +55,8 @@ const CarDetails = () => {
                     <div className="car-detail"> 
                         <img src={car.roofimage} className="car-detail-image"/> 
                         <div className="car-detail-layer">
-                            <p clasName="car-description"> &#x1F60E; {car.roof} </p>
-                            <p clasName="car-description">  &#128181; {car.roofprice}</p>
+                            <p className="car-description"> &#x1F60E; {car.roof} </p>
+                            <p className="car-description">  &#128181; {car.roofprice}</p>
                         </div>
                     </div>
                     <div className="car-detail"> 

@@ -15,7 +15,7 @@ const getCarById = async (req, res) => {
     try {
         const carId = req.params.carId
         const selectQuery = `
-            SELECT name, price, exterior, exteriorprice, exteriorimage, roof, roofprice, roofimage, wheels, wheelsprice, wheelsimage, interior, interiorprice, interiorimage
+            SELECT name, price, exterior, exteriorprice, exteriorimage, roof, roofprice, roofimage, wheels, wheelsprice, wheelsimage, interior, interiorprice, interiorimage, convertible
             FROM CustomItem
             WHERE id = ${carId}  
         `

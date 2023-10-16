@@ -164,8 +164,15 @@ const CreateCar = () => {
                     <div className="car-option">
                         <button onClick={toggleInteriorOptions}>Interior</button>
                     </div>
+                    <div className="car-option">
+                        <input 
+                            type="text" 
+                            placeholder='My New Car'
+                            value={car.name}
+                            onChange={(e) => handleChange(e.target.value, 'name', 0, '')}
+                        />
+                    </div>
                 </div>
-
                 <div className="car-button">
                     <button onClick={createCar}>CREATE</button>
                 </div>

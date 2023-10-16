@@ -27,7 +27,7 @@ const ViewCars = () => {
                             <header>
                                 <h2>
                                     <img src={imageSource} className="car-image"/>
-                                    {car.name ? car.name : " "}
+                                    <span>  {car.name ? car.name : " "} </span>
                                 </h2>
                             </header>
                             <div className="car-info">
