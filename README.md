@@ -6,7 +6,7 @@
 - Lab 2: [UnEarthed Part 2](https://github.com/qngyn/codepath-web103/tree/lab2)
 - Lab 3: [UnEarthed Part 3](https://github.com/qngyn/codepath-web103/tree/lab3)
 - Lab 4: [UnEarthed Part 4](https://github.com/qngyn/codepath-web103/tree/lab4)
-- Lab 5: On The Fly: Part 1
+- Lab 5: [On The Fly: Part 1](https://github.com/qngyn/codepath-web103/tree/lab5)
 - Lab 6: On The Fly, Part 2
 - Lab 7:
 - Lab 8: On the Fly, Part 3
@@ -15,7 +15,7 @@
 - Project 2: [Listicle Part 2](https://github.com/qngyn/codepath-web103/tree/project2)
 - Project 3: [Virtual Community Space](https://github.com/qngyn/codepath-web103/tree/project3)
 - Project 4: [DIY Delight](https://github.com/qngyn/codepath-web103/tree/project4)
-- Final Project
+- Final Project: [mYOUsic](https://github.com/qngyn/myousic)
 
 ## Contributors:
 - Quynh (Quinn) Nguyen
