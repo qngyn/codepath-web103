@@ -10,7 +10,7 @@ const createTripDestination = async (request, response) => {
     }
     catch (error) {
         response.status(409).json({ error: error.message })
-    }
+  }
 }
 
 const getTripsDestinations = async (request, response) => {
