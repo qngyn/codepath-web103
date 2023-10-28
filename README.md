@@ -7,7 +7,7 @@
 - Lab 3: [UnEarthed Part 3](https://github.com/qngyn/codepath-web103/tree/lab3)
 - Lab 4: [UnEarthed Part 4](https://github.com/qngyn/codepath-web103/tree/lab4)
 - Lab 5: [On The Fly: Part 1](https://github.com/qngyn/codepath-web103/tree/lab5)
-- Lab 6: On The Fly, Part 2
+- Lab 6: [On The Fly, Part 2](https://github.com/qngyn/codepath-web103/tree/lab6)
 - Lab 7:
 - Lab 8: On the Fly, Part 3
 - Lab 9: On the Fly, Part 4
